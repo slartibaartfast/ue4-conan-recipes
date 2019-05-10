@@ -13,8 +13,8 @@ class PythonUe4Conan(ConanFile):
 
     def requirements(self):
         #self.requires("OpenSSL/ue4@trota/{}".format(self.channel))  # this may not work
-        #self.requires("OpenSSL/1.0.2n@conan/stable")  # this works
-        self.requires("OpenSSL/ue4@adamrehn/{}".format(self.channel))
+        self.requires("OpenSSL/1.0.2n@conan/stable")  # this works, need 102h for 4.22 on linux
+        #self.requires("OpenSSL/ue4@adamrehn/{}".format(self.channel)) # can't import ssl error when running resulting python
         self.requires("zlib/ue4@adamrehn/{}".format(self.channel))
 
     def _capture(self, command):
